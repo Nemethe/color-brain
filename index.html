@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <style type="text/css">
+         body {
+         background: ${nazwaZmiennej};
+         }
+      </style>
+   </head>
+   <body>
+      <h1>ten kolor jest ${typKoloru}</h1>
+      <iframe id="myIframe" src=""></iframe>
+      <button onClick="newSite('dark')">dark</button>
+      <button onClick="newSite('light')">light</button>
+      <script type="text/javascript">
+         function iframeDidLoad() {
+          alert('Done');
+         }
+         
+         function newSite(theme) {
+          document.getElementById('myIframe').src = '/'+theme+'/';
+         }    
+      </script>
+   </body>
+</html>
